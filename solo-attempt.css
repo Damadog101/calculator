@@ -7,3 +7,38 @@ body {
     background: linear-gradient(to right, rgb(25, 152, 105), rgb(134, 115, 205))
 
 }
+.calc-grid {
+    display: grid;
+   
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat( 4,100px);
+	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    min-height: 100vh;
+    
+}
+.spanTwo {
+    grid-column: span 2;
+
+}
+.calc-grid button {
+    cursor: pointer;
+	font-size: 2rem;
+	border: 1px solid white;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+.output {
+	grid-column: 1 / -1;
+	background-color: rgba(0, 0, 0, 0.75);
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.calc-grid  button:hover {
+	background-color: rgba(255, 255, 255, 0.9);
+}
